@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $message = $name . " message :" . "\n\n" . $_POST['message'];
     $headers = "From:" . $from;
     mail($to,$subject,$message,$headers);
-    header("Location: index.php?#contact");
+    header("Location: index.html?#contact");
     exit();
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }

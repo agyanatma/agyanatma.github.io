@@ -77,7 +77,7 @@ $(document).ready(function () {
             message: "You have write some message.",
         },
         submitHandler: function (form) {
-            $(form).ajaxSubmit();
+            //$(form).ajaxSubmit();
         },
     });
 });
