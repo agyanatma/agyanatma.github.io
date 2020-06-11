@@ -102,6 +102,10 @@ section:nth-child(odd) {
   padding: 0 0.5em;
 }
 
+.logo img {
+  width: 70%;
+}
+
 .home {
   height: 100vh;
 }
@@ -355,7 +359,6 @@ section:nth-child(odd) {
 
 .form-contact button {
   margin-top: 2em;
-  font-size: 600;
 }
 
 .field {

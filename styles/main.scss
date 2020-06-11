@@ -93,6 +93,10 @@ section:nth-child(odd) {
 
 .logo {
     padding: 0 0.5em;
+
+    img {
+        width: 70%;
+    }
 }
 
 .home {
@@ -343,7 +347,6 @@ section:nth-child(odd) {
 
     button {
         margin-top: 2em;
-        font-size: 600;
     }
 }
 
