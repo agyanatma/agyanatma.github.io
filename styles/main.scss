@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap");
+
+$black: #242424;
+$grey: #282828;
+$white: #f4f4f4;
+$yellow: #ffe622;
+$watermark: #dddddd03;
+$field: #333333;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: $white;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.header-wrapper {
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    ul {
+        display: flex;
+    }
+
+    li a {
+        padding: 0.7em 1.5em;
+        font-size: 1em;
+    }
+
+    a.active {
+        color: $yellow;
+    }
+}
+
+.wrapper {
+    padding: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    width: 100%;
+}
+
+header {
+    background-color: $black;
+    width: 100%;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+section {
+    width: 100%;
+    padding: 10em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    outline: 0;
+    background-color: $black;
+    z-index: 2;
+}
+
+section:nth-child(odd) {
+    background-color: $grey;
+}
+
+.logo {
+    padding: 0 0.5em;
+}
+
+.home {
+    height: 100vh;
+
+    .wrapper {
+        grid-template-columns: 2fr 1fr;
+        gap: 2em;
+
+    }
+
+    .watermark {
+        top: 0.5em;
+        right: -0.5em;
+
+        #folio {
+            margin-left: 0.5em;
+        }
+    }
+
+    .content {
+        padding-right: 2em;
+
+        p {
+            margin: 1em 0;
+            font-size: 1.2em;
+        }
+    }
+}
+
+.about {
+    height: 100vh;
+
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+
+    }
+
+    .watermark {
+        bottom: 0.3em;
+        left: -0.2em;
+    }
+}
+
+.portfolio {
+    // .wrapper {
+    //     grid-template-columns: 1200px;
+    //     justify-items: flex-start;
+    // }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    .content {
+        margin-bottom: 3em;
+    }
+
+    .watermark {
+        top: 1.5em;
+        right: -0.3em
+    }
+}
+
+.contact {
+    overflow: hidden;
+    height: 100%;
+
+    .wrapper {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    .content {
+        margin-bottom: 3em;
+    }
+
+    // .wrapper {
+    //     grid-template-columns: 1200px;
+
+    // }
+
+    .watermark {
+        bottom: 0.2em;
+        right: -1em;
+    }
+}
+
+.content {
+
+    h1 {
+        margin: 0;
+        font-size: 3em;
+        line-height: 1;
+    }
+
+    p {
+        margin: 1.5em 0;
+        font-size: 1em;
+        font-weight: 300;
+    }
+}
+
+.watermark {
+    color: $watermark;
+    position: absolute;
+    font-size: 22em;
+    pointer-events: none;
+    z-index: -2;
+
+    p {
+        margin: 0;
+        line-height: 0.8;
+        font-weight: bold;
+    }
+}
+
+.call {
+    margin: 2em 0;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 0.7em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: $yellow;
+    border: 2px solid $yellow;
+    color: $black;
+}
+
+.btn-primary:hover {
+    background-color: $grey;
+    color: $yellow;
+}
+
+.btn-secondary {
+    background-color: $black;
+    border: 2px solid $yellow;
+    color: $yellow;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $yellow;
+
+    p {
+        margin: 0;
+        margin-left: 0.5em;
+    }
+}
+
+.portfolio-content {
+    h2 {
+        margin: 0;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    p {
+        margin: 1em 0;
+    }
+
+    .icon-link {
+        margin-top: 2em;
+        color: $white;
+        @extend .icon-link;
+
+        p {
+            margin: 0;
+            margin-right: 0.5em;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+    }
+}
+
+.page-illust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stripe {
+    margin-bottom: 0.5em;
+}
+
+.container-left {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 2em 0;
+
+    .portfolio-content {
+        margin-left: 3em;
+    }
+}
+
+.container-right {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 2em 0;
+
+    .portfolio-content {
+        margin-right: 3em;
+    }
+
+}
+
+.badge {
+    background-color: $yellow;
+    color: $black;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 0.2em 1.2em;
+    margin-right: 0.5em;
+    border-radius: 10px;
+}
+
+.portfolio-image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid $grey;
+    margin: 0.5em;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    justify-items: flex-start;
+}
+
+.form-contact {
+    width: 80%;
+
+    button {
+        margin-top: 2em;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+
+    label {
+        margin: 0.5em 0;
+    }
+
+    input {
+        background: $field;
+        border: 2px solid $white;
+        border-radius: 10px;
+        font-size: 1em;
+        padding: 0.6em 1em;
+        caret-color: $white;
+        color: $white;
+        width: 70%;
+    }
+
+    textarea {
+        @extend input;
+        font-family: 'Poppins', sans-serif;
+        resize: none;
+        width: 100%;
+    }
+
+    input:focus {
+        border: 2px solid $yellow;
+    }
+
+    h2 {
+        font-weight: 600;
+        margin: 0;
+    }
+
+}
+
+.info-contact {
+    margin-top: 2em;
+
+    .field {
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    nav {
+        li a {
+            padding: 0.5em 0.7em;
+        }
+    }
+
+    .home {
+        padding: 1em;
+
+        .wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+
+        }
+
+        .content {
+
+            h1 {
+                font-size: 2.6em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+
+        .page-illust {
+            display: none;
+        }
+
+    }
+
+    .about {
+
+        padding: 1em;
+
+        .wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+
+        }
+
+        .page-illust {
+            display: none;
+        }
+
+    }
+
+    .portfolio {
+
+        padding: 50% 1em;
+
+        .wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .content {
+            margin-bottom: 1.5em;
+        }
+
+    }
+
+    .contact {
+        padding: 50% 1em;
+
+        .content {
+            margin-bottom: 1.5em;
+        }
+    }
+
+    .container-left {
+        //padding: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        .portfolio-content {
+            margin: 0;
+            padding: 1em 0;
+            margin-bottom: 1em;
+        }
+    }
+
+    .container-right {
+        grid-template-areas: 'portimage''portcontent';
+        //padding: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+        .portfolio-content {
+            margin: 0;
+            padding: 1em 0;
+            margin-bottom: 1em;
+            grid-area: portcontent;
+        }
+
+        .portfolio-image {
+            grid-area: portimage;
+        }
+    }
+
+    .portfolio-image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'infocontact''formcontact';
+
+        .form-contact {
+            grid-area: formcontact;
+        }
+
+        .info-contact {
+            grid-area: infocontact;
+        }
+
+    }
+
+    .form-contact {
+        width: 100%;
+
+        input,
+        textarea {
+            width: 100%;
+        }
+
+    }
+
+
+}
