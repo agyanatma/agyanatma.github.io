@@ -355,6 +355,7 @@ section:nth-child(odd) {
 
 .form-contact button {
   margin-top: 2em;
+  font-size: 600;
 }
 
 .field {
