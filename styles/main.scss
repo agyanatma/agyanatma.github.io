@@ -4,6 +4,7 @@ $black: #242424;
 $grey: #282828;
 $white: #f4f4f4;
 $yellow: #ffe622;
+$red: #ff5454;
 $watermark: #dddddd03;
 $field: #333333;
 
@@ -354,6 +355,7 @@ section:nth-child(odd) {
     display: flex;
     flex-direction: column;
     margin-bottom: 0.5em;
+    position: relative;
 
     label {
         margin: 0.5em 0;
@@ -367,7 +369,6 @@ section:nth-child(odd) {
         padding: 0.6em 1em;
         caret-color: $white;
         color: $white;
-        width: 70%;
     }
 
     textarea {
@@ -379,6 +380,23 @@ section:nth-child(odd) {
 
     input:focus {
         border: 2px solid $yellow;
+    }
+
+    textarea:focus {
+        border: 2px solid $yellow;
+    }
+
+    input.error {
+        border: 2px solid $red;
+    }
+
+    label.error {
+        position: absolute;
+        top: 0.4em;
+        right: 0;
+        color: $yellow;
+        font-size: 0.8em;
+        font-weight: 300;
     }
 
     h2 {

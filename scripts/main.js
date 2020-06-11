@@ -60,4 +60,24 @@ $(document).ready(function () {
             });
         })
         .scroll();
+
+    $("#mail").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true,
+            },
+            message: "required",
+        },
+        messages: {
+            email: {
+                required: "I have to know your email.",
+                email: "Your email address must be email formated.",
+            },
+            message: "You have write some message.",
+        },
+        submitHandler: function (form) {
+            $(form).ajaxSubmit();
+        },
+    });
 });

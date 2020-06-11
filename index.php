@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agyan's Portfolio</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
@@ -81,11 +82,11 @@
                 <div class="call">
                     <a href="https://www.linkedin.com/in/agyanatma/" target="_blank" class="icon-link"
                         style="margin-right: 1.5em;">
-                        <img src="/assets/linkedin.svg" alt="linkedin-logo" />
+                        <img src="assets/linkedin.svg" alt="linkedin-logo" />
                         <p>linkedin</p>
                     </a>
                     <a href="https://github.com/agyanatma" target="_blank" class="icon-link">
-                        <img src="/assets/github.svg" alt="github-logo" />
+                        <img src="assets/github.svg" alt="github-logo" />
                         <p>github</p>
                     </a>
                 </div>
@@ -162,13 +163,13 @@
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
-                            <input type="email" name="email">
+                            <input type="email" name="email" required>
                         </div>
                         <div class="field">
                             <label for="message">Messages</label>
-                            <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                            <textarea name="message" cols="30" rows="5" required></textarea>
                         </div>
-                        <button class="btn btn-primary" type="submit">Send Message</button>
+                        <button class="btn btn-primary" name="submit" type="submit">Send Message</button>
                     </form>
                 </div>
                 <div class="info-contact">

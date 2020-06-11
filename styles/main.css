@@ -370,6 +370,7 @@ section:nth-child(odd) {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 0.5em;
+  position: relative;
 }
 
 .field label {
@@ -384,7 +385,6 @@ section:nth-child(odd) {
   padding: 0.6em 1em;
   caret-color: #f4f4f4;
   color: #f4f4f4;
-  width: 70%;
 }
 
 .field textarea {
@@ -395,6 +395,23 @@ section:nth-child(odd) {
 
 .field input:focus, .field textarea:focus {
   border: 2px solid #ffe622;
+}
+
+.field textarea:focus {
+  border: 2px solid #ffe622;
+}
+
+.field input.error, .field textarea.error {
+  border: 2px solid #ff5454;
+}
+
+.field label.error {
+  position: absolute;
+  top: 0.4em;
+  right: 0;
+  color: #ffe622;
+  font-size: 0.8em;
+  font-weight: 300;
 }
 
 .field h2 {
