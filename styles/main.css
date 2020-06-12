@@ -357,10 +357,6 @@ section:nth-child(odd) {
   width: 80%;
 }
 
-.form-contact button {
-  margin-top: 2em;
-}
-
 .field {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,6 +421,23 @@ section:nth-child(odd) {
 
 .info-contact .field {
   margin-bottom: 2em;
+}
+
+.submit-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+}
+
+.submit-button label {
+  margin-left: -5em;
+  color: #ffe622;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 768px) {

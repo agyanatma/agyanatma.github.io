@@ -345,10 +345,6 @@ section:nth-child(odd) {
 
 .form-contact {
     width: 80%;
-
-    button {
-        margin-top: 2em;
-    }
 }
 
 .field {
@@ -411,6 +407,21 @@ section:nth-child(odd) {
 
     .field {
         margin-bottom: 2em;
+    }
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+
+    label {
+        margin-left: -5em;
+        color: $yellow;
+        opacity: 0;
+        pointer-events: none;
+        // margin-left: 2em;
+        // color: #43ff43;
     }
 }
 

@@ -1,6 +1,5 @@
 <?php
 
-if(isset($_POST['submit'])){
     $to = "agyanatma1410@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
@@ -8,8 +7,10 @@ if(isset($_POST['submit'])){
     $message = $name . " message :" . "\n\n" . $_POST['message'];
     $headers = "From:" . $from;
     mail($to,$subject,$message,$headers);
-    header("Location: index.html?#contact");
-    exit();
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    }
+
+    header('Content-type: application/json');
+    echo json_encode([
+        'data' => 'Email succesffuly sent!',
+        'code'=> 200
+    ]);
 ?>

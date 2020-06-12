@@ -77,7 +77,26 @@ $(document).ready(function () {
             message: "You have write some message.",
         },
         submitHandler: function (form) {
-            //$(form).ajaxSubmit();
+            let name = $("#name").val();
+            let email = $("#email").val();
+            let message = $("#message").val();
+            $.ajax({
+                url: "mail.php",
+                method: "POST",
+                data: {
+                    name: name,
+                    email: email,
+                    message: message,
+                },
+                success: function (res) {
+                    if (res.code == 200) {
+                        $(".success").animate({
+                            marginLeft: "2em",
+                            opacity: 1,
+                        });
+                    }
+                },
+            });
         },
     });
 });

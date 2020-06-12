@@ -159,17 +159,21 @@
                     <form action="mail.php" method="POST" id="mail">
                         <div class="field">
                             <label for="name">Name</label>
-                            <input type="text" name="name">
+                            <input type="text" name="name" id="name">
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div class="field">
                             <label for="message">Messages</label>
-                            <textarea name="message" cols="30" rows="5" required></textarea>
+                            <textarea name="message" cols="30" rows="5" id="message" required></textarea>
                         </div>
-                        <button class="btn btn-primary" name="submit" type="submit">Send Message</button>
+                        <div class="submit-button">
+                            <button id="submit" class="btn btn-primary" name="submit" type="submit">Send
+                                Message</button>
+                            <label class="success">Email sent succesfully!</label>
+                        </div>
                     </form>
                 </div>
                 <div class="info-contact">
