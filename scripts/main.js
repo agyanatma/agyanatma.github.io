@@ -90,10 +90,16 @@ $(document).ready(function () {
                 },
                 success: function (res) {
                     if (res.code == 200) {
-                        $(".success").animate({
-                            marginLeft: "2em",
-                            opacity: 1,
-                        });
+                        $(".success")
+                            .animate({
+                                marginLeft: "2em",
+                                opacity: 1,
+                            })
+                            .delay(3000)
+                            .fadeOut(400);
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#message").val("");
                     }
                 },
             });
