@@ -345,6 +345,10 @@ section:nth-child(odd) {
 
 .form-contact {
     width: 80%;
+
+    button {
+        z-index: 4;
+    }
 }
 
 .field {

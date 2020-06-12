@@ -90,13 +90,21 @@ $(document).ready(function () {
                 },
                 success: function (res) {
                     if (res.code == 200) {
-                        $(".success")
-                            .animate({
+                        $(".success").animate(
+                            {
                                 marginLeft: "2em",
                                 opacity: 1,
-                            })
-                            .delay(3000)
-                            .fadeOut(400);
+                            },
+                            500,
+                            function () {
+                                setTimeout(function () {
+                                    $(".success").animate({
+                                        marginLeft: "-5em",
+                                        opacity: 0,
+                                    });
+                                }, 3000);
+                            }
+                        );
                         $("#name").val("");
                         $("#email").val("");
                         $("#message").val("");

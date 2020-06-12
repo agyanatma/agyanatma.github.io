@@ -357,6 +357,10 @@ section:nth-child(odd) {
   width: 80%;
 }
 
+.form-contact button {
+  z-index: 4;
+}
+
 .field {
   display: -webkit-box;
   display: -ms-flexbox;
