@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $("a.disabled").click(function (e) {
+        e.preventDefault();
+    });
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything

@@ -285,6 +285,19 @@ section:nth-child(odd) {
   font-size: 1.2em;
 }
 
+a.disabled {
+  cursor: not-allowed !important;
+}
+
+a.disabled p {
+  color: #7a7a7a;
+}
+
+a.disabled img.arrow {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
 .page-illust {
   display: -webkit-box;
   display: -ms-flexbox;

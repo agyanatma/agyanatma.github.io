@@ -7,6 +7,7 @@ $yellow: #ffe622;
 $red: #ff5454;
 $watermark: #dddddd03;
 $field: #333333;
+$disabled: #7a7a7a;
 
 * {
     box-sizing: border-box;
@@ -284,6 +285,19 @@ section:nth-child(odd) {
             font-size: 1.2em;
         }
 
+
+    }
+}
+
+a.disabled {
+    cursor: not-allowed !important;
+
+    p {
+        color: $disabled;
+    }
+
+    img.arrow {
+        filter: brightness(50%);
     }
 }
 
