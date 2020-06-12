@@ -1,1 +1,4 @@
-# agyanatma.github.io
+agyanatma.github.io
+# Portfolio Website
+
+A website for my portfolio. Built with simple HTML, SCSS, and JQuery.
